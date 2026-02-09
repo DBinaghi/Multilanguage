@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="600" height="400">
-<path fill="#FFF" d="m0,0h202v202H0"/>
-<path fill="#090" d="m0,200H200V0H600V400H0m58-243 41-126 41,126-107-78h133"/>
+<svg width="640" height="480" xmlns="http://www.w3.org/2000/svg">
+ <g id="Layer_1">
+  <rect id="svg_1" height="478.99999" width="640.99999" y="1" x="0" stroke="#000" fill="#019b00"/>
+  <rect stroke="#ffffff" id="svg_3" height="240" width="213" y="1" x="0" fill="#ffffff"/>
+  <path id="svg_4" d="m16.90499,100.51287l67.99044,0l21.00957,-64.59063l21.00958,64.59063l67.99043,0l-55.00532,39.91875l21.01066,64.59063l-55.00535,-39.91984l-55.00533,39.91984l21.01066,-64.59063l-55.00534,-39.91875z" stroke="#efefe8" fill="#019b00"/>
+ </g>
 </svg>
