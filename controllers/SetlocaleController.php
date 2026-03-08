@@ -61,9 +61,20 @@ class Multilanguage_SetlocaleController extends Zend_Controller_Action
         }
 
         if (empty($url)) {
-            $referer = $request->getHeader('Referer');
-            $url = $this->getParam('redirect', $referer) ?: '/';
-        }
+			$referer = $request->getHeader('Referer');
+			$redirect = $this->getParam('redirect', $referer) ?: '/';
+			
+			// Validation: only accepts relative URLs or from the same domain
+			$parsedRedirect = parse_url($redirect);
+			$parsedBase = parse_url(WEB_ROOT);
+			
+			if (empty($parsedRedirect['host']) || 
+				$parsedRedirect['host'] === $parsedBase['host']) {
+				$url = $redirect;
+			} else {
+				$url = '/'; // external redirect: go back to the homepage
+			}
+		}
 
         $this->getHelper('Redirector')->setPrependBase(false)->goToUrl($url);
     }
